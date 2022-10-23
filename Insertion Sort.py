@@ -18,18 +18,22 @@ def insertionSort1(n, arr):
     # Write your code here
     temp = arr[-1]
     for i in range(len(arr)-1,-1,-1):
-        if arr[i]>=temp and arr[i-1]>temp:
+        if i == 0:
+            arr[i] = temp
+            print(*arr, sep=' ')
+            break
+
+        elif arr[i]>=temp and arr[i-1]>temp:
             #print(arr[i],">=",temp)
             arr[i] = arr[i-1]
-            print(*arr, sep=" ")   
+            print(*arr, sep=' ')  
         
         
-        elif arr[i]>=temp and arr[i-1]<temp :
+        elif arr[i]>=temp and arr[i-1]<temp:
             #print("found")
             #print(i)
             arr[i] = temp
-            print(*arr, sep=" ")   
-
+            print(*arr, sep=' ')
             break
 
 if __name__ == '__main__':
