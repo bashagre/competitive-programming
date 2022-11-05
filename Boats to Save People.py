@@ -1,4 +1,6 @@
-people.sort()
+class Solution:
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
+        people.sort()
         lo = 0
         hi = len(people)-1
         boats = 0
